@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"name":"manual-pv"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"100Mi"},"hostPath":{"path":"/tmp/manual-data"},"persistentVolumeReclaimPolicy":"Retain","storageClassName":"manual","volumeMode":"Filesystem"}}
+  creationTimestamp: "2026-01-04T00:04:30Z"
+  finalizers:
+  - kubernetes.io/pv-protection
+  name: manual-pv
+  resourceVersion: "1439"
+  uid: f0ab9c30-41ed-492e-bf5c-6bbbe2b154ea
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 100Mi
+  hostPath:
+    path: /tmp/manual-data
+    type: ""
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
+  volumeMode: Filesystem
+status:
+  lastPhaseTransitionTime: "2026-01-04T00:04:30Z"
+  phase: Available

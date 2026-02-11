@@ -1,0 +1,129 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2025-12-29T04:36:35Z"
+  generation: 1
+  labels:
+    run: arthur-dent
+  name: arthur-dent
+  namespace: default
+  resourceVersion: "9703"
+  uid: da207227-5bef-4a17-afb7-549756778e80
+spec:
+  containers:
+  - args:
+    - sleep
+    - "3600"
+    image: busybox:1.28
+    imagePullPolicy: IfNotPresent
+    name: arthur-dent
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-q9nhg
+      readOnly: true
+  dnsConfig:
+    nameservers:
+    - 1.1.1.1
+  dnsPolicy: None
+  enableServiceLinks: true
+  nodeName: ubukubu-node-2
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-q9nhg
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-12-29T04:36:36Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2025-12-29T04:36:35Z"
+    observedGeneration: 1
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-12-29T09:55:53Z"
+    observedGeneration: 1
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-12-29T09:55:53Z"
+    observedGeneration: 1
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-12-29T04:36:35Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://09eb9c8d6dd6bd39dac06974c5f97eef4ef57a87730b9adaff4aae921a2033c0
+    image: docker.io/library/busybox:1.28
+    imageID: docker.io/library/busybox@sha256:141c253bc4c3fd0a201d32dc1f493bcf3fff003b6df416dea4f41046e0f37d47
+    lastState:
+      terminated:
+        containerID: containerd://9b18f6478b16e3421ed93beb43d470acdaba48242754dc28b3bcd2018acc1ce0
+        exitCode: 0
+        finishedAt: "2025-12-29T09:55:51Z"
+        reason: Completed
+        startedAt: "2025-12-29T04:36:36Z"
+    name: arthur-dent
+    ready: true
+    resources: {}
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2025-12-29T09:55:52Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-q9nhg
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.56.22
+  hostIPs:
+  - ip: 192.168.56.22
+  observedGeneration: 1
+  phase: Running
+  podIP: 10.244.2.5
+  podIPs:
+  - ip: 10.244.2.5
+  qosClass: BestEffort
+  startTime: "2025-12-29T04:36:35Z"

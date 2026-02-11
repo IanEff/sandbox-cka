@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: multi-container-playground
+  name: multi-container-playground
+spec:
+  volumes:
+  - name: shared
+    emptyDir:
+      sizeLimit: 10Mi
+  containers:
+  - image: nginx:1-alpine
+    name: c1
+    env:
+    - name: MY_NODE_NAME
+      valueFrom:
+        fieldRef:
+          fieldPath: spec.nodeName
+    volumeMounts:
+    - mountPath: /vol
+      name: shared
+    resources: {}
+  - image: busybox:1
+    name: c2
+    command:
+    - /bin/sh
+    - -c
+    - |
+      while true
+      do
+        date >> /vol/date.log
+        sleep 1
+      done
+    volumeMounts:
+    - mountPath: /vol
+      name: shared
+    resources: {}
+  - image: busybox:1
+    name: c3
+    command:
+    - /bin/sh
+    - -c
+    - touch /vol/date.log && tail -f /vol/date.log
+    volumeMounts:
+    - mountPath: /vol
+      name: shared
+    resources: {}

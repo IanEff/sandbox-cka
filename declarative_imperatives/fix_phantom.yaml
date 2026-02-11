@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"ghost"},"name":"phantom","namespace":"haunted"},"spec":{"ports":[{"name":"80-80","port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"ghost"},"type":"ClusterIP"},"status":{"loadBalancer":{}}}
+  creationTimestamp: "2025-12-27T22:10:28Z"
+  labels:
+    app: ghost
+  name: phantom
+  namespace: haunted
+  resourceVersion: "65750"
+  uid: c0636833-248f-4ee2-b957-e65317898ab3
+spec:
+  clusterIP: 10.102.84.187
+  clusterIPs:
+  - 10.102.84.187
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: 80-80
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: ghost
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

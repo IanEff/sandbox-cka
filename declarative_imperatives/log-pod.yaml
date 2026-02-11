@@ -1,0 +1,128 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"name":"log-pod","namespace":"default"},"spec":{"containers":[{"args":["/bin/sh","-c","while true; do date \u003e\u003e /var/log/app.log; sleep 1; done"],"image":"busybox","name":"main","volumeMounts":[{"mountPath":"/var/log","name":"log-vol"}]}],"volumes":[{"emptyDir":{},"name":"log-vol"}]}}
+  creationTimestamp: "2026-01-06T13:59:25Z"
+  generation: 1
+  name: log-pod
+  namespace: default
+  resourceVersion: "69353"
+  uid: 0a57d95a-97e5-484b-97c3-e3bac9493097
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - while true; do date >> /var/log/app.log; sleep 1; done
+    image: busybox
+    imagePullPolicy: Always
+    name: main
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/log
+      name: log-vol
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-c26mt
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ubukubu-node-2
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - emptyDir: {}
+    name: log-vol
+  - name: kube-api-access-c26mt
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:59:26Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:59:25Z"
+    observedGeneration: 1
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:59:26Z"
+    observedGeneration: 1
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:59:26Z"
+    observedGeneration: 1
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:59:25Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://1c5f558ad8ee327ac025a08dd8f481b281c51c410a314d310db1c5a06c08081a
+    image: docker.io/library/busybox:latest
+    imageID: docker.io/library/busybox@sha256:d80cd694d3e9467884fcb94b8ca1e20437d8a501096cdf367a5a1918a34fc2fd
+    lastState: {}
+    name: main
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-06T13:59:25Z"
+    volumeMounts:
+    - mountPath: /var/log
+      name: log-vol
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-c26mt
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.56.22
+  hostIPs:
+  - ip: 192.168.56.22
+  observedGeneration: 1
+  phase: Running
+  podIP: 10.0.2.68
+  podIPs:
+  - ip: 10.0.2.68
+  qosClass: BestEffort
+  startTime: "2026-01-06T13:59:25Z"

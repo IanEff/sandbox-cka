@@ -1,0 +1,20 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: testhttproute-hr
+spec:
+  parentRefs:
+    - name: testgateway-gw
+  hostnames:
+    - "hello-workld.exposed"
+  rules:
+    - backendRefs:
+        - group: ""
+          kind: Service
+          name: web
+          port: 3000
+          weight: 1
+      matches:
+        - path:
+            type: PathPrefix
+            value: /

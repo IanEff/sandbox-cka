@@ -1,0 +1,107 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    name: logger
+    namespace: trouble-logs
+  spec:
+    containers:
+    - command:
+      - sh
+      - -c
+      - mkdir -p /var/log && while true; do echo 'System operational at $(date)'; sleep 2; done
+      image: busybox
+      imagePullPolicy: Always
+      name: heavy-writer
+      resources: {}
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-zpvzl
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-05T23:10:54Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-05T23:10:53Z"
+      observedGeneration: 1
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-05T23:10:54Z"
+      observedGeneration: 1
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-05T23:10:54Z"
+      observedGeneration: 1
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-01-05T23:10:53Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://588f3fc4a86cf27cb0c61695436aeba0fd43622d257d84900de01c2923f72d2d
+      image: docker.io/library/busybox:latest
+      imageID: docker.io/library/busybox@sha256:d80cd694d3e9467884fcb94b8ca1e20437d8a501096cdf367a5a1918a34fc2fd
+      lastState: {}
+      name: heavy-writer
+      ready: true
+      resources: {}
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2026-01-05T23:10:54Z"
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-zpvzl
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 192.168.56.22
+    hostIPs:
+    - ip: 192.168.56.22
+    observedGeneration: 1
+    phase: Running
+    podIP: 10.0.2.18
+    podIPs:
+    - ip: 10.0.2.18
+    qosClass: BestEffort
+    startTime: "2026-01-05T23:10:53Z"
+kind: List
+metadata:
+  resourceVersion: ""

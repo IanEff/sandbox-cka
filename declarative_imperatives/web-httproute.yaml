@@ -1,0 +1,28 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"gateway.networking.k8s.io/v1","kind":"HTTPRoute","metadata":{"annotations":{},"name":"web-route","namespace":"default"},"spec":{"parentRefs":[{"name":"web-gateway"}],"rules":[{"backendRefs":[{"name":"web-service","port":80}]}]}}
+  creationTimestamp: "2026-01-04T20:45:10Z"
+  generation: 1
+  name: web-route
+  namespace: default
+  resourceVersion: "15914"
+  uid: abcb9200-fa57-40c3-8c07-4d44a0bbcef0
+spec:
+  parentRefs:
+  - group: gateway.networking.k8s.io
+    kind: Gateway
+    name: web-gateway
+  rules:
+  - backendRefs:
+    - group: ""
+      kind: Service
+      name: web-service
+      port: 80
+      weight: 1
+    matches:
+    - path:
+        type: PathPrefix
+        value: /

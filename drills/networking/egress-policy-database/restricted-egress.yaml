@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: restricted-egress
+  namespace: secure-app
+spec:
+  podSelector:
+    matchLabels:
+      role: api
+  egress:
+    - to:
+      - namespaceSelector:
+          matchLabels:
+            name: kube-system
+      ports:
+        - protocol: UDP
+          port: 53
+    - to:
+      - podSelector:
+          matchLabels:
+            app: database
+        namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: secure-app
+      ports:
+      - protocol: TCP
+        port: 80
+  policyTypes:
+  - Egress

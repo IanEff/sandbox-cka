@@ -1,0 +1,61 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: traffic-director
+  namespace: project-r500
+spec:
+  parentRefs:
+  - name: gateway     # ⚠️ Verify: kubectl get gateway -n project-r500
+    namespace: project-r500
+    # port: 30080     # ⚠️ External NodePort. Route binds to internal Listener (usually 80).
+                      # Hostname matching ("r500.gateway") handles this automatically.
+  hostnames:
+  - "r500.gateway"
+  rules:
+  # -- Existing Routes (Verify Service Names!) --
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /desktop
+    backendRefs:
+    - name: desktop   # ⚠️ Verify Service Name: kubectl get svc -n project-r500
+      port: 80
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /mobile
+    backendRefs:
+    - name: mobile    # ⚠️ Verify Service Name
+      port: 80
+
+  # -- /auto Redirect Logic --
+  
+  # 1. Mobile UA -> Redirect to /mobile
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /auto
+      headers:
+      - type: Exact
+        name: User-Agent
+        value: mobile
+    filters:
+    - type: RequestRedirect
+      requestRedirect:
+        path:
+          type: ReplaceFullPath
+          replaceFullPath: /mobile
+        statusCode: 302
+
+  # 2. Default -> Redirect to /desktop
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /auto
+    filters:
+    - type: RequestRedirect
+      requestRedirect:
+        path:
+          type: ReplaceFullPath
+          replaceFullPath: /desktop
+        statusCode: 302

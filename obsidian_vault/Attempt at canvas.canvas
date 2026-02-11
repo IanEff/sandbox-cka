@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"edc6d32dbd940db5","x":-125,"y":-40,"width":250,"height":70,"type":"text","text":"storage"},
+		{"id":"2aa8425b75c41fb5","x":-280,"y":-220,"width":250,"height":60,"type":"text","text":"networking"},
+		{"id":"1ae1b04704d31f1e","x":125,"y":-220,"width":250,"height":60,"type":"text","text":"scheduling"}
+	],
+	"edges":[]
+}

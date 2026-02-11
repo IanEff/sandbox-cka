@@ -1,0 +1,7 @@
+apiVersion: example.com/v1
+kind: Widget
+metadata:
+  name: spinner
+spec:
+  color: "blue"
+  speed: 100

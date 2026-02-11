@@ -1,0 +1,11 @@
+[project]
+name = "sandbox-kcna"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "catppuccin>=2.5.0",
+    "loguru>=0.7.3",
+    "rich>=14.2.0",
+    "cyclopts>=2.9.0",
+    "kubernetes>=35.0.0",
+]

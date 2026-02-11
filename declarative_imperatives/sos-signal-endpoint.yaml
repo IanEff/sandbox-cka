@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2026-01-03T02:19:24Z"
+  creationTimestamp: "2026-01-03T02:19:24Z"
+  labels:
+    app: sos-signal
+    endpoints.kubernetes.io/managed-by: endpoint-controller
+  name: sos-signal
+  namespace: default
+  resourceVersion: "1314"
+  uid: 1e6d08f0-8296-4d15-b14b-b48869eb35c7

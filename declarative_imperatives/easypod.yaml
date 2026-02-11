@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: logger
+  name: logger
+  namespace: trouble-logs
+spec:
+  containers:
+  - image: busybox
+    command:
+      - sh
+      - -c
+      - while true; do echo 'System operational at $(date)'; sleep 2; done
+    name: heavy-writer
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

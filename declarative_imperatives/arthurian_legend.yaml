@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: arthur-dent
+  name: arthur-dent
+spec:
+  containers:
+  - args:
+    - sleep
+    - "3600"
+    image: busybox:1.28
+    name: arthur-dent
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

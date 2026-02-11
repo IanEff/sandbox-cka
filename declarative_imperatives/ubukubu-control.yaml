@@ -1,0 +1,136 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2026-01-04T18:41:10Z"
+  labels:
+    beta.kubernetes.io/arch: arm64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: arm64
+    kubernetes.io/hostname: ubukubu-control
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/control-plane: ""
+    node.kubernetes.io/exclude-from-external-load-balancers: ""
+    type: restricted
+  name: ubukubu-control
+  resourceVersion: "32323"
+  uid: 17d33530-532a-4eb0-97c5-02b99d0b3d25
+spec:
+  podCIDR: 10.244.0.0/24
+  podCIDRs:
+  - 10.244.0.0/24
+  taints:
+  - effect: NoSchedule
+    key: restricted
+    value: "true"
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/control-plane
+status:
+  addresses:
+  - address: 192.168.56.10
+    type: InternalIP
+  - address: ubukubu-control
+    type: Hostname
+  allocatable:
+    cpu: "4"
+    ephemeral-storage: "8355100249"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    hugepages-32Mi: "0"
+    hugepages-64Ki: "0"
+    memory: 1898260Ki
+    pods: "110"
+  capacity:
+    cpu: "4"
+    ephemeral-storage: 9065864Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    hugepages-32Mi: "0"
+    hugepages-64Ki: "0"
+    memory: 2000660Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2026-01-04T18:42:23Z"
+    lastTransitionTime: "2026-01-04T18:42:23Z"
+    message: Cilium is running on this node
+    reason: CiliumIsUp
+    status: "False"
+    type: NetworkUnavailable
+  - lastHeartbeatTime: "2026-01-05T10:29:07Z"
+    lastTransitionTime: "2026-01-04T18:41:10Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2026-01-05T10:29:07Z"
+    lastTransitionTime: "2026-01-04T18:41:10Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2026-01-05T10:29:07Z"
+    lastTransitionTime: "2026-01-04T18:41:10Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2026-01-05T10:29:07Z"
+    lastTransitionTime: "2026-01-04T18:42:19Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - quay.io/cilium/cilium@sha256:5649db451c88d928ea585514746d50d91e6210801b300c897283ea319d68de15
+    sizeBytes: 235712931
+  - names:
+    - quay.io/cilium/cilium-envoy@sha256:ca76eb4e9812d114c7f43215a742c00b8bf41200992af0d21b5561d46156fd15
+    sizeBytes: 65659191
+  - names:
+    - quay.io/cilium/operator-generic@sha256:b5a0138e1a38e4437c5215257ff4e35373619501f4877dbaf92c89ecfad81797
+    sizeBytes: 61690107
+  - names:
+    - registry.k8s.io/kube-apiserver@sha256:5af1030676ceca025742ef5e73a504d11b59be0e5551cdb8c9cf0d3c1231b460
+    - registry.k8s.io/kube-apiserver:v1.34.3
+    sizeBytes: 24567639
+  - names:
+    - registry.k8s.io/kube-proxy@sha256:7298ab89a103523d02ff4f49bedf9359710af61df92efdc07bac873064f03ed6
+    - registry.k8s.io/kube-proxy:v1.34.3
+    sizeBytes: 22804272
+  - names:
+    - registry.k8s.io/etcd@sha256:042ef9c02799eb9303abf1aa99b09f09d94b8ee3ba0c2dd3f42dc4e1d3dce534
+    - registry.k8s.io/etcd:3.6.5-0
+    sizeBytes: 21136588
+  - names:
+    - registry.k8s.io/kube-controller-manager@sha256:716a210d31ee5e27053ea0e1a3a3deb4910791a85ba4b1120410b5a4cbcf1954
+    - registry.k8s.io/kube-controller-manager:v1.34.3
+    sizeBytes: 20719958
+  - names:
+    - registry.k8s.io/coredns/coredns@sha256:e8c262566636e6bc340ece6473b0eed193cad045384401529721ddbe6463d31c
+    - registry.k8s.io/coredns/coredns:v1.12.1
+    sizeBytes: 20392204
+  - names:
+    - registry.k8s.io/kube-scheduler@sha256:f9a9bc7948fd804ef02255fe82ac2e85d2a66534bae2fe1348c14849260a1fe2
+    - registry.k8s.io/kube-scheduler:v1.34.3
+    sizeBytes: 15776215
+  - names:
+    - registry.k8s.io/pause@sha256:278fb9dbcca9518083ad1e11276933a2e96f23de604a3a08cc3c80002767d24c
+    - registry.k8s.io/pause:3.10.1
+    sizeBytes: 267939
+  nodeInfo:
+    architecture: arm64
+    bootID: 5a17a624-cf88-4937-aa70-7c36806d525d
+    containerRuntimeVersion: containerd://1.7.28
+    kernelVersion: 6.8.0-90-generic
+    kubeProxyVersion: ""
+    kubeletVersion: v1.34.3
+    machineID: 7bb4fa4c45774bb0bb4619e57885ef1c
+    operatingSystem: linux
+    osImage: Ubuntu 24.04.3 LTS
+    systemUUID: 7bb4fa4c45774bb0bb4619e57885ef1c

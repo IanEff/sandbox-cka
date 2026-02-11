@@ -1,0 +1,43 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: iperf-server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: iperf-server
+  template:
+    metadata:
+      labels:
+        app: iperf-server
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - iperf-server
+            topologyKey: "kubernetes.io/hostname"
+      containers:
+      - name: iperf
+        image: alpine:3.19
+        command: ["/bin/sh", "-c"]
+        args: ["apk add --no-cache iperf3 && iperf3 -s"]
+        ports:
+        - containerPort: 5201
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: iperf-server
+spec:
+  selector:
+    app: iperf-server
+  ports:
+  - protocol: TCP
+    port: 5201
+    targetPort: 5201

@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shop-ingress
+spec:
+  ingressClassName: default
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: products-svc
+            port:
+              number: 80
+        path: /products
+        pathType: Prefix
+      - backend:
+          service:
+            name: checkout-svc
+            port:
+              number: 80
+        path: /checkout
+        pathType: Prefix
+status:
+  loadBalancer: {}

@@ -1,0 +1,117 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-01-03T02:19:24Z"
+  generation: 1
+  labels:
+    id: wilson
+  name: castaway
+  namespace: default
+  resourceVersion: "1323"
+  uid: 7da72c4e-ac82-4ea9-9306-f36ec7e2c85f
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: Always
+    name: castaway
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-hbzq5
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ubukubu-node-1
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-hbzq5
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-03T02:19:27Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-03T02:19:24Z"
+    observedGeneration: 1
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-03T02:19:27Z"
+    observedGeneration: 1
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-03T02:19:27Z"
+    observedGeneration: 1
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-03T02:19:24Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://57098fa349e83d5e95644bb80d0e318b5f37260ee04316b64073766162e295f8
+    image: docker.io/library/nginx:latest
+    imageID: docker.io/library/nginx@sha256:ca871a86d45a3ec6864dc45f014b11fe626145569ef0e74deaffc95a3b15b430
+    lastState: {}
+    name: castaway
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-01-03T02:19:27Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-hbzq5
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.56.21
+  hostIPs:
+  - ip: 192.168.56.21
+  observedGeneration: 1
+  phase: Running
+  podIP: 10.244.1.2
+  podIPs:
+  - ip: 10.244.1.2
+  qosClass: BestEffort
+  startTime: "2026-01-03T02:19:24Z"

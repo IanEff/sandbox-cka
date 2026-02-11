@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: ready-checker
+  name: ready-checker
+spec:
+  containers:
+  - image: busybox
+    command: ["/bin/sleep", "3600"]
+    name: ready-checker
+    resources: {}
+    readinessProbe:
+      exec:
+        command: ["/bin/cat", "/tmp/health"]
+      periodSeconds: 5
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

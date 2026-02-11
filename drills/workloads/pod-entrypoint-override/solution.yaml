@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: override-pod
+spec:
+  containers:
+  - name: override
+    image: alpine
+    command: ["sleep", "3600"]

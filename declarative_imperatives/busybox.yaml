@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: secure-app
+  name: secure-app
+  namespace: vault
+spec:
+  containers:
+  - image: busybox
+    name: secure-app
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

@@ -1,0 +1,138 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-01-06T13:50:17Z"
+  generation: 1
+  labels:
+    run: cmd-pod
+  name: cmd-pod
+  namespace: default
+  resourceVersion: "68286"
+  uid: 2a399bae-8dad-4a10-86ea-15960819535d
+spec:
+  containers:
+  - command:
+    - /bin/sleepytime
+    - "3600"
+    image: busybox
+    imagePullPolicy: Always
+    name: cmd-pod
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-9wd9j
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ubukubu-node-2
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-9wd9j
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:50:19Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:50:17Z"
+    observedGeneration: 1
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:50:17Z"
+    message: 'containers with unready status: [cmd-pod]'
+    observedGeneration: 1
+    reason: ContainersNotReady
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:50:17Z"
+    message: 'containers with unready status: [cmd-pod]'
+    observedGeneration: 1
+    reason: ContainersNotReady
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-01-06T13:50:17Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://d0ba8cc6b33a32dda0ed39eb5fe202f1eeaffa165f1e36d2913e1da747a5f6d7
+    image: docker.io/library/busybox:latest
+    imageID: docker.io/library/busybox@sha256:d80cd694d3e9467884fcb94b8ca1e20437d8a501096cdf367a5a1918a34fc2fd
+    lastState:
+      terminated:
+        containerID: containerd://d0ba8cc6b33a32dda0ed39eb5fe202f1eeaffa165f1e36d2913e1da747a5f6d7
+        exitCode: 128
+        finishedAt: "2026-01-06T13:51:01Z"
+        message: 'failed to create containerd task: failed to create shim task: OCI
+          runtime create failed: runc create failed: unable to start container process:
+          error during container init: exec: "/bin/sleepytime": stat /bin/sleepytime:
+          no such file or directory: unknown'
+        reason: StartError
+        startedAt: "1970-01-01T00:00:00Z"
+    name: cmd-pod
+    ready: false
+    resources: {}
+    restartCount: 3
+    started: false
+    state:
+      waiting:
+        message: 'failed to create containerd task: failed to create shim task: OCI
+          runtime create failed: runc create failed: unable to start container process:
+          error during container init: exec: "/bin/sleepytime": stat /bin/sleepytime:
+          no such file or directory: unknown'
+        reason: RunContainerError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-9wd9j
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 192.168.56.22
+  hostIPs:
+  - ip: 192.168.56.22
+  observedGeneration: 1
+  phase: Running
+  podIP: 10.0.2.169
+  podIPs:
+  - ip: 10.0.2.169
+  qosClass: BestEffort
+  startTime: "2026-01-06T13:50:17Z"

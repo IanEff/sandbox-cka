@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: batch-processor
+spec:
+  completions: 10
+  parallelism: 5
+  template:
+    spec:
+      containers:
+      - name: batch-processor
+        image: busybox
+        command: ["sleep", "5"]
+      restartPolicy: Never

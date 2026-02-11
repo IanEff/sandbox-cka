@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: bubby
+  name: bubby
+spec:
+  volumes:
+  - name: sharted-darted
+    emptyDir: {}
+  containers:
+  - image: alpine:latest
+    name: bubby
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do date; sleep 10; done"]
+    volumeMounts:
+    - name: sharted-darted
+      mountPath: /data
+  - image: alpine:latest
+    name: schlubby
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do date; sleep 10; done"]
+    volumeMounts:
+    - name: sharted-darted
+      mountPath: /data

@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webapp-ingress
+  namespace: web
+spec:
+  tls:
+  - hosts:
+    - webapp.example.com
+    secretName: webapp-tls-cert
+  ingressClassName: cilium
+  rules:
+  - host: webapp.example.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: webapp-service
+            port:
+              number: 80
+        path: /
+        pathType: Prefix

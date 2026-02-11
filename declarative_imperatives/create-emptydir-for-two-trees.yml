@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: twotrees
+spec:
+  volumes:
+  - name: tree-volume
+    emptyDir: {}
+  containers:
+  - name: tree-one
+    image: alpine:latest
+    command: ["sh", "-c", "tail -f /dev/null"]
+    volumeMounts:
+    - name: tree-volume
+      mountPath: /etc/a
+  - name: tree-two
+    image: alpine:latest
+    command: ["sh", "-c", "tail -f /dev/null"]
+    volumeMounts:
+      - name: tree-volume
+        mountPath: /etc/b
+      

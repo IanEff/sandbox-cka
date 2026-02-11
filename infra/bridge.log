@@ -1,0 +1,507 @@
+[17:50:39] BRIDGE INFO: Starting Cache Bridge Service...
+[17:50:39] BRIDGE INFO: Bridging 0.0.0.0:3142 -> 127.0.0.1:3142
+[17:50:39] BRIDGE INFO: Bridging 0.0.0.0:5050 -> 127.0.0.1:5050
+[17:50:39] BRIDGE INFO: Bridging 0.0.0.0:5001 -> 127.0.0.1:5001
+[17:50:39] BRIDGE INFO: Bridging 0.0.0.0:5002 -> 127.0.0.1:5002
+[17:50:39] BRIDGE INFO: Bridging 0.0.0.0:5003 -> 127.0.0.1:5003
+[17:50:39] BRIDGE INFO: Bridging 0.0.0.0:5004 -> 127.0.0.1:5004
+[17:50:39] BRIDGE INFO: Bridging 0.0.0.0:6443 -> 127.0.0.1:6443
+[17:50:39] BRIDGE INFO: Bridging 0.0.0.0:8404 -> 127.0.0.1:8404
+[07:52:02] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:02] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:03] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:05] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:06] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:07] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:08] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:09] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:10] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:11] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:12] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:13] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:14] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:15] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:16] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:17] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:18] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:19] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:20] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:21] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:22] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:23] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:24] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:25] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:27] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:28] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:29] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:30] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:31] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:32] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:33] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:34] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:35] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:36] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:37] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:38] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:39] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:40] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:41] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:42] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:43] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:44] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:45] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:46] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:47] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:48] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:49] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:51] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:52] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:53] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:54] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:55] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:56] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:57] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:58] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:52:59] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:00] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:01] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:02] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:03] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:04] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:05] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:06] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:07] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:08] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:09] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:10] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:11] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:12] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:14] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:15] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:16] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:17] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:18] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:19] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:20] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:21] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:22] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:23] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:24] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:25] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:26] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files
+[07:53:27] BRIDGE ERROR: socket.accept() out of system resource
+socket: <asyncio.TransportSocket fd=6, family=2, type=1, proto=6, laddr=('0.0.0.0', 3142)>
+Traceback (most recent call last):
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/asyncio/selector_events.py", line 178, in _accept_connection
+  File "/Users/ian/.local/share/uv/python/cpython-3.14.0-macos-aarch64-none/lib/python3.14/socket.py", line 298, in accept
+OSError: [Errno 24] Too many open files

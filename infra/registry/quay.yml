@@ -1,0 +1,10 @@
+version: 0.1
+log:
+  level: info
+storage:
+  filesystem:
+    rootdirectory: /var/lib/sandbox-registry/quay
+http:
+  addr: 0.0.0.0:5004
+proxy:
+  remoteurl: https://quay.io

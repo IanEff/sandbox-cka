@@ -1,0 +1,31 @@
+# Conquered Drills
+
+- **babel-fish**: The pod `arthur-dent` is trying to understand the local dialect of the cluster, but it seems to have a fish stuck in its ear that isn't working quite right.
+- **bermuda-triangle**: Flight `19` (pod `pilot`) is trying to contact the `control-tower`, but all signals are being lost in the void.
+- **broken-pod**: A pod named `web-frontend` in the `dev` namespace is in a CrashLoopBackOff state.
+- **canary-deployment-routing**: We have deployed two versions of our application: `app-v1` and `app-v2` in the `canary-ns` namespace.
+- **captain-ahab**: A Helm release `metrics-app` in namespace `helm-ns` is in a failed state.
+- **coredns-config**: Pods in the `dns-test` namespace cannot resolve the Kubernetes service `my-svc.
+- **crashloop-detective**: A pod named `webapp` in namespace `crashloop-ns` is in CrashLoopBackOff.
+- **crd-confusion**: A Custom Resource Definition (CRD) named `widgets.
+- **deployment-decay**: The deployment `web-frontend` in namespace `lifecycle` has been deployed but the pods are not becoming Ready.
+- **endpoint-slice-drift**: A service `backend-svc` in namespace `endpoint-ns` reports no endpoints.
+- **gateway-gauntlet**: The team is adopting the Kubernetes Gateway API.
+- **ghost-service**: The Service `phantom` in namespace `haunted` is supposed to expose the `spirit` deployment.
+- **growing-pains**: A deployment `data-app` in namespace `resize-test` is running low on storage.
+- **helm-hostage**: The development team attempted to deploy their application using Helm, but it's not coming up.
+- **hpa-autoscale**: A deployment `web-api` in namespace `autoscale-test` needs horizontal pod autoscaling configured.
+- **ingress-routing**: Two services `foo-service` (port 8080) and `bar-service` (port 9090) are running in the `default` namespace.
+- **inspector-gadget**: The ServiceAccount `gadget-sa` in namespace `go-go` is supposed to be able to inspect secrets in the same namespace.
+- **key-confusion**: A deployment `api-server` in namespace `secrets-ns` is failing to start.
+- **kubeadm-upgrade**: A critical security patch requires draining and cordoning node `ubukubu-node-1` for maintenance.
+- **label-mismatch**: A Deployment named `updater` and a Service named `updater-service` are running in the `default` namespace.
+- **message-in-a-bottle**: A castaway (pod `castaway`) has thrown a bottle into the ocean (Service `sos-signal`) hoping for rescue.
+- **netpol-denial**: The `secure-backend` namespace has a "Default Deny" Network Policy in place.
+- **node-not-ready**: A worker node in the cluster is showing status `NotReady`.
+- **orphan-highway**: A PersistentVolume `archive-pv` contains important data.
+- **rbac-lockdown**: A ServiceAccount `deploy-bot` in namespace `rbac-ns` needs to create, list, and delete Deployments in the `rbac-ns` namespace only.
+- **saturn-mission**: The mission to Saturn is stuck on the launchpad.
+- **sidecar-logging**: A Pod named `web-server` is running in the `default` namespace.
+- **static-mismatch**: A PersistentVolume `manual-pv` has been provisioned for a specific task.
+- **tainted-love**: The `precious-app` deployment is supposed to run on a dedicated "restricted" node.

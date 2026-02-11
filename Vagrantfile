@@ -3,19 +3,9 @@
 
 # Configuration
 CONFIG = {
-  # Primary cluster nodes (auto-init control plane + auto-join workers)
-  num_worker_nodes: Integer(ENV.fetch("SANDBOX_NUM_WORKER_NODES", "3")),
-
-  # Extra kubeadm-ready nodes (common provisioning only; no kubeadm init/join)
-  num_prep_worker_nodes: Integer(ENV.fetch("SANDBOX_NUM_PREP_WORKER_NODES", "0")),
-  num_prep_control_plane_nodes: Integer(ENV.fetch("SANDBOX_NUM_PREP_CONTROL_PLANE_NODES", "0")),
-
+  num_worker_nodes: Integer(ENV.fetch("SANDBOX_NUM_WORKER_NODES", "2")),
   control_plane_ip: ENV.fetch("SANDBOX_CONTROL_PLANE_IP", "192.168.56.10"),
-
-  # IP allocation scheme (avoid collisions; simple, deterministic ranges)
   worker_ip_base: Integer(ENV.fetch("SANDBOX_WORKER_IP_BASE", "20")),
-  prep_worker_ip_base: Integer(ENV.fetch("SANDBOX_PREP_WORKER_IP_BASE", "30")),
-  prep_control_plane_ip_base: Integer(ENV.fetch("SANDBOX_PREP_CONTROL_PLANE_IP_BASE", "40")),
 
     # Optional local cache (APT + OCI registries) running on the macOS host.
   cache_enabled: ENV.fetch("SANDBOX_CACHE_ENABLED", "1") == "1",
@@ -151,34 +141,4 @@ Vagrant.configure("2") do |config|
     end
   end
 
-  # Extra kubeadm-ready nodes (no automatic kubeadm init/join)
-  # Bring these up when you want spare capacity to join later.
-  # Naming continues from configured workers (e.g. ubukubu-node-2, ubukubu-node-3...)
-  (1..CONFIG[:num_prep_worker_nodes]).each do |i|
-    node_index = CONFIG[:num_worker_nodes] + i
-    config.vm.define "ubukubu-node-#{node_index}" do |node|
-      node.vm.hostname = "ubukubu-node-#{node_index}"
-      node.vm.network "private_network", ip: "192.168.56.#{CONFIG[:worker_ip_base] + node_index}"
-
-      configure_virtualbox.call(node, name: "ubukubu-node-#{node_index}", memory: 2048, cpus: 2)
-
-      node.vm.provision "shell",
-        path: "scripts/common.sh",
-        env: cache_env
-    end
-  end
-
-  (1..CONFIG[:num_prep_control_plane_nodes]).each do |i|
-    node_index = i + 1
-    config.vm.define "ubukubu-control-#{node_index}" do |node|
-      node.vm.hostname = "ubukubu-control-#{node_index}"
-      node.vm.network "private_network", ip: "192.168.56.#{CONFIG[:prep_control_plane_ip_base] + i}" # e.g., 192.168.56.41
-
-      configure_virtualbox.call(node, name: "ubukubu-control-#{node_index}", memory: 2048, cpus: 2)
-
-      node.vm.provision "shell",
-        path: "scripts/common.sh",
-        env: cache_env
-    end
-  end
 end

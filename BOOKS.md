@@ -31,6 +31,10 @@
   * *Status:* 100% Complete
   * *Notes:* Strong architectural reference for structural design patterns. Re-read Ch 2 & 24 for CKA.
 
+* **Managing Cloud Native Data on Kubernetes**
+  * *Status:* Read
+  * *Notes:* A good reference.
+
 ---
 
 ## ✅ Completed / Reference (Mixed Quality)
@@ -80,14 +84,3 @@
   * [x] Templates & Values guidelines
 
 ---
-
-## �🔮 Strategic Forecast (Next Steps)
-
-**Phase 1: GitOps Mastery (Current)**
-
-* Finish *GitOps and Kubernetes* (Yuen) to solidify the controller/reconciliation loop concepts.
-
-**Phase 2: Storage Specialization (Professional Domain)**
-
-* Resume **Managing Cloud Native Data on Kubernetes** (Currently at Ch 3).
-* Deep dive into CSI (Container Storage Interface), stateful workloads, and persistent data patterns.

@@ -1,117 +1,125 @@
-# CKA Study Sandbox ("Ubukubu")
+# CKA Study Sandbox
 
-![Status](https://img.shields.io/badge/CKA-PASSED-success?style=for-the-badge&logo=kubernetes)
+A disposable Kubernetes cluster and drill engine for CKA exam prep. Run `vagrant up`, get a multi-node kubeadm cluster with production-grade networking, and start solving practice problems.
 
-This repository contains the study environment and "Drill Engine" used to prepare for and pass the **Certified Kubernetes Administrator (CKA)** exam (v1.34).
+## Prerequisites
 
-It features a fully automated ephemeral cluster ("ubukubu") and a custom CLI tool to generate, deploy, and verify practice scenarios.
+* **Vagrant** (2.3+) & **VirtualBox**
+* **Python 3.12+** & **[uv](https://github.com/astral-sh/uv)**
 
-## 🏗 Architecture
-
-### Infrastructure ("Ubukubu")
-
-The lab runs on local Virtual Machines provisioned via Vagrant.
-
-* **OS**: Ubuntu 24.04 LTS (Noble Numbat)
-* **Kubernetes**: v1.34 (kubeadm)
-* **Networking**: Cilium CNI (strict ARP L2 mode, Gateway API enabled, `kubeProxyReplacement=true`)
-* **Load Balancing**: MetalLB (Layer 2)
-
-| VM Name | IP | Role |
-| :--- | :--- | :--- |
-| `ubukubu-control` | `192.168.56.10` | Control Plane |
-| `ubukubu-worker` | `192.168.56.11` | Worker Node |
-
-### The Drill Engine (`drill.py`)
-
-A custom Python CLI tool that manages the lifecycle of practice problems. It simulates the CKA exam environment by breaking the cluster and asking you to fix it, or asking you to build resources to specific requirements.
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-* **Vagrant** & **VirtualBox**
-* **Python 3.12+** & **[uv](https://github.com/astral-sh/uv)** (Python package manager)
-
-### 1. Spin up the Cluster
-
-Provision the VMs. This takes about 5-10 minutes.
+## Quick Start
 
 ```bash
 vagrant up
-```
-
-* `vagrant halt`: Pause the VMs.
-* `vagrant destroy -f`: Tear down everything.
-
-Once up, config is automatically merged into your host's `~/.ssh/config` and `~/.kube/config`.
-
-```bash
 kubectl config use-context ubukubu
 kubectl get nodes
 ```
 
-### 2. Enter the Dojo
-
-Most work is done directly on the control plane node, mimicking the exam's bastion host.
+This provisions a control plane and 3 worker nodes (configurable). Cluster kubeconfig is automatically merged into `~/.kube/config`.
 
 ```bash
+# SSH into the control plane (mimics the exam bastion host)
 vagrant ssh ubukubu-control
 ```
 
-## 🛠 Using the Drill Engine
+## Cluster Configuration
 
-The `drill.py` script is the heart of this repo. It uses `uv` to manage dependencies seamlessly.
+All configuration is done via environment variables, read by the `Vagrantfile` at provision time.
 
-### List Available Drills
+### Nodes
 
-See all drills grouped by CKA curriculum domain.
-
-```bash
-uv run drill.py list
-```
-
-### Start a Drill
-
-Deploys resources to the cluster (often in a broken state) and prints the "Problem Statement".
+| Variable | Default | Description |
+| :--- | :--- | :--- |
+| `SANDBOX_NUM_WORKER_NODES` | `3` | Number of worker nodes to provision |
+| `SANDBOX_CONTROL_PLANE_IP` | `192.168.56.10` | Control plane IP address |
+| `SANDBOX_WORKER_IP_BASE` | `20` | Workers get IPs `192.168.56.{base+n}` (e.g. `.21`, `.22`, `.23`) |
 
 ```bash
-# Syntax: uv run drill.py start <category>/<name>
-uv run drill.py start troubleshooting/pod-pending-resource-limits
+# Example: single worker node
+SANDBOX_NUM_WORKER_NODES=1 vagrant up
 ```
 
-### Verify Your Solution
+### Kubernetes & CNI
 
-Runs validation scripts against your work. Returns `Pass` (0) or `Fail` (1).
+| Variable | Default | Description |
+| :--- | :--- | :--- |
+| `SANDBOX_KUBERNETES_VERSION_MINOR` | `1.34` | Kubernetes minor version |
+| `SANDBOX_CNI_PLUGIN` | `cilium` | CNI plugin (`cilium`, `flannel`, `calico`, `weavenet`) |
+
+### Optional Add-ons
+
+Toggle cluster add-ons on (`1`) or off (`0`). These run as provisioner scripts on the control plane.
+
+| Variable | Default | What it installs |
+| :--- | :--- | :--- |
+| `SANDBOX_INSTALL_METRICS_SERVER` | `1` | Metrics Server (required for `kubectl top` / HPA) |
+| `SANDBOX_INSTALL_LOCAL_PATH_PROVISIONER` | `1` | Rancher Local Path Provisioner (`local-path` StorageClass) |
+| `SANDBOX_INSTALL_METALLB` | `1` | MetalLB L2 load balancer (`192.168.56.200-240`) |
+| `SANDBOX_INSTALL_GATEWAY_API` | `1` | Gateway API CRDs (experimental v1.2.0, used by Cilium) |
+| `SANDBOX_INSTALL_PROMETHEUS` | `1` | Prometheus monitoring stack |
+| `SANDBOX_INSTALL_INGRESS_NGINX` | `0` | NGINX Ingress Controller |
+| `SANDBOX_INSTALL_LONGHORN` | `0` | Longhorn distributed storage |
+| `SANDBOX_INSTALL_ENVOY_GATEWAY` | `0` | Envoy Gateway |
+| `SANDBOX_INSTALL_ARGOCD` | `0` | Argo CD |
 
 ```bash
-uv run drill.py verify
+# Example: minimal cluster (no MetalLB, no Prometheus)
+SANDBOX_INSTALL_METALLB=0 SANDBOX_INSTALL_PROMETHEUS=0 vagrant up
 ```
 
-### Clean Up / Reset
+### Local Cache (Optional)
 
-Clear the current drill state (Note: this resets the tracking, but you may need to manually delete resources if the drill was destructive).
+If you're iterating on `vagrant destroy` / `vagrant up` cycles, a local APT + OCI registry cache on the host dramatically speeds up provisioning. Enabled by default (set `SANDBOX_CACHE_ENABLED=0` to disable).
+
+| Variable | Default | Description |
+| :--- | :--- | :--- |
+| `SANDBOX_CACHE_ENABLED` | `1` | Use host-side APT and registry caches |
+| `SANDBOX_K8S_CACHE_ENABLED` | `0` | Also cache `registry.k8s.io` images |
+| `SANDBOX_CACHE_HOST_VM` | `192.168.56.1` | Host IP as seen from VMs |
+| `SANDBOX_CACHE_APT_PORT` | `3142` | APT cache port (apt-cacher-ng) |
+| `SANDBOX_CACHE_REGISTRY_DOCKERHUB_PORT` | `5001` | Docker Hub mirror port |
+| `SANDBOX_CACHE_REGISTRY_K8S_PORT` | `5002` | registry.k8s.io mirror port |
+| `SANDBOX_CACHE_REGISTRY_GHCR_PORT` | `5003` | ghcr.io mirror port |
+| `SANDBOX_CACHE_REGISTRY_QUAY_PORT` | `5004` | quay.io mirror port |
+
+## The Drill Engine
+
+`drill.py` is a CLI tool that deploys practice problems to the cluster and verifies your solutions.
 
 ```bash
-uv run drill.py reset
+uv run drill.py list                                  # Browse available drills
+uv run drill.py start troubleshooting/broken-pod      # Deploy a drill
+uv run drill.py verify                                # Check your solution
+uv run drill.py reset                                 # Clear drill state
 ```
 
-## 📂 Repository Structure
+Each drill lives in `drills/<category>/<name>/` and contains:
 
-The salient directories for the engine are:
+* `problem.md` — the task description
+* `setup.sh` — idempotent script that creates the initial (often broken) cluster state
+* `verify.sh` — non-interactive validation (exit 0 = pass)
 
-* **`drill.py`**: The Drill Engine runner.
-* **`drills/`**: The catalog of exercises. Each drill contains a `problem.md` (task), `setup.sh` (break the cluster), and `verify.sh` (grade the solution).
-* **`scripts/`**: Infrastructure provisioning scripts.
-* **`declarative_imperatives/`**: Reference library of "perfect" YAML manifests used for study.
-* **`Vagrantfile`**: Infrastructure definition.
+### Drill Categories
 
-## 🎓 Curriculum
+Drills are organized by CKA curriculum domain:
 
-Drills are mapped to the standard CKA/CKAD domains:
+`architecture` · `cluster` · `gitops` · `networking` · `rbac` · `scheduling` · `security` · `storage` · `troubleshooting` · `workloads`
 
-* Cluster Architecture, Installation & Configuration
-* Workloads & Scheduling
-* Services & Networking (Cilium/Gateway API focus)
-* Storage (Local Path Provisioner)
-* Troubleshooting (The fun stuff)
+## Repository Structure
+
+```
+drill.py              CLI drill engine
+drills/               Practice problems (setup, verify, problem statement)
+scripts/              VM provisioning scripts
+declarative_imperatives/  Reference YAML manifests
+Vagrantfile           Infrastructure definition
+```
+
+## Cluster Lifecycle
+
+```bash
+vagrant up              # Provision and start the cluster
+vagrant halt            # Pause the VMs (preserves state)
+vagrant destroy -f      # Tear down everything
+vagrant ssh ubukubu-control   # SSH to control plane
+```

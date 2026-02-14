@@ -4,6 +4,7 @@ A disposable Kubernetes cluster and drill engine for CKA exam prep. Run `vagrant
 
 The specified vagrant box works only on arm64.  If you'd like to use a multi-arch box, just set config.vm.box in ./Vagrantfile to something multiarch, like bento/ubuntu-24.04.
 
+Weird attempt at a network diagram by NotebookLLM:
 ![CKA Lab Spec](assets/CKA-lab-spec.png)
 
 ## Prerequisites

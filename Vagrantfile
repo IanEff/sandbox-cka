@@ -82,7 +82,7 @@ Vagrant.configure("2") do |config|
     cp.vm.hostname = "ubukubu-control"
     cp.vm.network "private_network", ip: CONFIG[:control_plane_ip]
 
-    configure_virtualbox.call(cp, name: "ubukubu-control", memory: 2048, cpus: 4)
+    configure_virtualbox.call(cp, name: "ubukubu-control", memory: 4096, cpus: 4)
 
     cp.vm.provision "shell",
       path: "scripts/common.sh",

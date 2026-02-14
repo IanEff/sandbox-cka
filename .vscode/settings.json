@@ -122,5 +122,11 @@
         "eval": false,
         "Invoke-Expression": false,
         "iex": false
+    },
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.automationProfile.osx": {
+        "path": "/bin/zsh",
+        "icon": "terminal",
+        "args": []
     }
 }

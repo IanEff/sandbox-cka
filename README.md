@@ -2,6 +2,8 @@
 
 A disposable Kubernetes cluster and drill engine for CKA exam prep. Run `vagrant up`, get a multi-node kubeadm cluster with production-grade networking, and start solving practice problems.
 
+![CKA Lab Spec](assets/CKA-lab-spec.png)
+
 ## Prerequisites
 
 * **Vagrant** (2.3+) & **VirtualBox**

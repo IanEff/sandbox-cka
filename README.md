@@ -1,6 +1,8 @@
-# CKA Study Sandbox
+# CKA Sandbox
 
-A disposable Kubernetes cluster and drill engine for CKA exam prep. Run `vagrant up`, get a multi-node kubeadm cluster with production-grade networking, and start solving practice problems.
+A disposable Kubernetes cluster and drill engine for CKA exam prep. Run `vagrant up` to get a multi-node kubeadm cluster, and start running drills!
+
+The specified vagrant box works only on arm64.  If you'd like to use a multi-arch box, just set config.vm.box in ./Vagrantfile to something multiarch, like bento/ubuntu-24.04.
 
 ![CKA Lab Spec](assets/CKA-lab-spec.png)
 

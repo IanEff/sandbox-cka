@@ -36,7 +36,7 @@ Discovery is how an app actually reaches its destination using the information r
 
 ---
 
-**Note for your ADHD breakdown:** * **Service** = The Name & stable VIP (The "Phone Number").
+**Note:** * **Service** = The Name & stable VIP (The "Phone Number").
 
 - **EndpointSlice** = The list of live Pod IPs (The "Actual People" answering the phone).
 - **kube-proxy** = The "Switchboard" inside every node's brain that knows how to connect the Phone Number to a person.
